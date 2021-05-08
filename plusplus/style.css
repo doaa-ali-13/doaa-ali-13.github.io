@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 0.938rem;
+    font-family: 'Spartan', sans-serif;
+    
+
+}
+
+h1{
+    font-weight: 700;
+}
+
+/* ===layot=== */
+.container{
+    max-width:1200px;
+    height: auto;
+    
+    width: 100%;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction:column;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    width: 45%;
+}
+
+.right{
+    width:45%;
+}
+
+.down{
+    display: flex;
+    justify-content: space-between;
+}
+.down .info{
+  
+    border-radius: 10px;
+    background-color:hsl(300, 43%, 22%);
+    margin: 1em;
+}
+
+
+/*===typo===*/
+
+.left{
+    padding: 3em;
+}
+
+.left h1{
+    padding-bottom: .6em;
+    font-size: 2.5rem;
+    color: hsl(300, 43%, 22%);
+}
+
+.left p{
+    color:hsl(303, 10%, 53%);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.right{
+    padding: 3em;
+   
+    
+}
+
+
+.right .stary-div{
+
+   margin-bottom: 2em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: hsl(300, 24%, 96%);
+    border-radius: 10px;
+   color: hsl(300, 43%, 22%);
+    font-weight: 700;
+    
+}
+
+.down .info{
+    padding: 2em;
+    margin: 2em;
+}
+
+.down .info img{
+    border-radius: 50%;
+    width: 100%;
+    max-width: 60px;
+    margin-bottom: 2em;
+   
+    
+}
+
+
+.down .info .header{
+    display: flex;
+    justify-content: space-between;
+   
+   
+   
+}
+
+
+.down .info .name{
+    padding: 1em;
+    padding-right: 4em;
+    font-size: .8rem;
+    margin: 1em;
+    width: 100%;
+}
+
+
+.down .info .name h3{
+    color: hsl(333, 60%, 70%);
+    margin-bottom: .5em;
+        
+    
+}
+
+
+.down .info .name h3:first-of-type{
+    color: hsl(0, 0%, 100%);
+}
+.down .info p{
+    color: hsl(0, 0%, 100%);
+}
+
+
+@media (max-width:550px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .top{
+         display: flex;
+        flex-direction: column;
+    }
+    
+     .down{
+         display: flex;
+        flex-direction: column;
+    }
+    .left ,.right{
+    width: 100%
+    }
+    
+    .left{
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
