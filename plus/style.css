@@ -107,14 +107,14 @@ position: relative;
 
 ul li .bord{
   
-    font-size: 20px;
-    height: 40px;
-    width:40px;
-    line-height: 40px;
+    font-size: 1.25rem;
+    height: 2.5rem;
+    width:2.5rem;
+    line-height: 2.5rem;
     border: 1px solid #fff;
     border-radius: 50%;
     color: #fff;
-    margin: 0 15px;
+    margin: 0 0.938rem;
     cursor: pointer;
 }
 
