@@ -84,13 +84,14 @@ text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-end;
+   
 
 }
 
 .down .mid{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
    
 }
 
@@ -101,6 +102,7 @@ text-align: center;
 
 .down .img img{
     width:50px;
+    float: right;
 }
 
 
@@ -134,6 +136,7 @@ text-align: center;
     .down{
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         
     }
     .mid ,.left,.right{

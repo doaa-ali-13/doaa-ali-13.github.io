@@ -16,40 +16,30 @@ h1{
 }
 
 /* ===layot=== */
+
+
 .container{
-    max-width:1200px;
-    height: auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .top{
+         display: flex;
+        flex-direction: column;
+    }
     
-    width: 100%;
-    margin: 0 auto;
-    background-color: hsl(0, 0%, 100%);
-    display: flex;
-    flex-direction:column;
-    box-shadow: 10px 10px 5px grey;
-}
+     .down{
+         display: flex;
+        flex-direction: column;
+         width: 100%;
+    }
 
-.top{
-    display: flex;
-    justify-content: space-between;
-}
-
-.left{
-    width: 45%;
-}
-
-.right{
-    width:45%;
-}
-
-.down{
-    display: flex;
-    justify-content: space-between;
-}
 .down .info{
   
     border-radius: 10px;
     background-color:hsl(300, 43%, 22%);
     margin: 1em;
+    width:30%;
 }
 
 
@@ -109,7 +99,8 @@ h1{
 
 .down .info .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
    
    
    
@@ -118,7 +109,7 @@ h1{
 
 .down .info .name{
     padding: 1em;
-    padding-right: 4em;
+   
     font-size: .8rem;
     margin: 1em;
     width: 100%;
@@ -141,8 +132,53 @@ h1{
 }
 
 
-@media (max-width:375px){
-    .container{
+@media (min-width:375px){
+   .container{
+    max-width:1200px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction:column;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left{
+    width: 45%;
+}
+
+.right{
+    width:45%;
+}
+
+.down{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+    .down .info{
+        width: 30%;
+    }
+   
+}
+
+
+
+
+
+
+/*
+
+
+ .container{
         display: flex;
         flex-direction: column;
         
@@ -156,20 +192,6 @@ h1{
          display: flex;
         flex-direction: column;
     }
-    .left ,.right{
-    width: 100%
-    }
-    
-    .left{
-        text-align: center;
-    }
-}
-
-
-
-
-
-
-
+*/
 
 
