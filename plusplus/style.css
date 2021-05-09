@@ -85,6 +85,7 @@ h1{
 .down .info{
     padding: 2em;
     margin: 2em;
+    width: 100%;
 }
 
 .down .info img{
