@@ -1,0 +1,114 @@
+.container{
+    height: 100%;
+    width:100%;
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:auto auto;
+    justify-content: center; 
+    justify-items: center;
+    margin: 0 auto;
+    font-size: .938rem;
+    grid-template-areas: 
+        "f f s ff"
+        "th fo fo ff";
+    color: hsl(0, 0%, 100%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+}
+
+.container .review{
+    /*border:1px solid black;*/
+    border-radius: 10px;
+    padding: 1.5em;
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: column;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;
+   
+}
+.fifth5{
+    grid-area:ff;
+}
+.first1{
+    grid-area:f;
+    background-color: hsl(263, 55%, 52%);
+}
+.third3{
+    grid-area: th;
+    background-color: hsl(0, 0%, 100%);
+}
+.forth4{
+    grid-area: fo;
+    background-color:  hsl(219, 29%, 14%);
+}
+.second2{
+    background-color: hsl(217, 19%, 35%);
+}
+
+h3{
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+
+
+.img-name{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin-bottom: 1.5em;
+    
+}
+.img-name .img{
+    margin-right: .5em;
+}
+
+.img-name .img img{
+   max-width: 40px;
+    border-radius: 50%;
+    border:1px solid #fff;
+}
+
+.img-name .name{
+    margin-left: .5em;
+}
+.img-name .name h3:last-of-type{
+    color: hsl(0, 0%, 50%)
+}
+.review .paragraph{
+    display: flex;
+   
+    justify-content: space-between;
+     flex-direction: column;
+}
+.review .paragraph .first{
+   margin-bottom: 1.3em;
+}
+.review .paragraph .second{
+    color: hsl(0, 0%, 70%)
+}
+
+.fifth5,.third3{
+    color: hsl(217, 19%, 35%);
+}
+
+.first{
+    font-size: 25px;
+    font-weight: 600;
+    
+}
+
+.fifth5 .second,.forth4 .second{
+    color: hsl(217, 19%, 70%)
+}
+@media (max-width:375px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
