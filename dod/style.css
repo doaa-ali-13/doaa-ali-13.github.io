@@ -35,6 +35,11 @@
 .first1{
     grid-area:f;
     background-color: hsl(263, 55%, 52%);
+      background-image:url(images/bg-pattern-quotation.svg);
+   background-repeat: no-repeat;
+    background-position:  80% 10%;
+   
+   
 }
 .third3{
     grid-area: th;
@@ -99,13 +104,14 @@ h3{
 .first{
     font-size: 25px;
     font-weight: 600;
+  
     
 }
 
 .fifth5 .second,.forth4 .second{
     color: hsl(217, 19%, 70%)
 }
-@media (max-width:375px){
+@media (max-width:575px){
     .container{
         display: flex;
         flex-direction: column;
