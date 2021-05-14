@@ -8,7 +8,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 h1,h3{
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 ul{
 padding: 0;
@@ -40,10 +40,17 @@ margin: 0;}
 }
 .logo img{
     width: 100%;
+    max-width: 200px;
     
 }
+.button-1, .logo{
+    width:40%;
+}
+
 .button-1 button{
    max-width:150px; 
+    float: right;
+    font-size:55%;
 }
 
 .right{
@@ -230,7 +237,7 @@ button:hover{
         justify-content: space-between;
         
     }
-    .text-head .left{
+    .text-head .left,.right{
         width: 100%;
         text-align: center;
         margin-bottom: 2em;
