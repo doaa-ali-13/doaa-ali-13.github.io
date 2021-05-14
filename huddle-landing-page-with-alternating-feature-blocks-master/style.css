@@ -1,0 +1,259 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+   font-size: 1.125rem;
+    font-family: 'Open Sans', sans-serif;
+}
+h1,h3{
+    margin-bottom: 1.5em;
+}
+ul{
+padding: 0;
+margin: 0;}
+.header{
+    padding: 2em;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(192, 100%, 9%);
+    font-weight: 600;
+    background-image: url(images/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:     hsl(193, 100%, 96%);
+    margin-bottom: 2em;
+    font-weight: 600;
+
+}
+
+.text-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+.logo img{
+    width: 100%;
+    
+}
+.button-1 button{
+   max-width:150px; 
+}
+
+.right{
+    width: 55%
+}
+.left{
+    width:40%;
+}
+.right img{
+    width: 100%;
+}
+ h1,h3{
+    color: hsl(192, 100%, 9%);
+     font-weight: 700;
+}
+
+button{
+border-style: none;
+padding: 1em 2em 1em 2em;
+border-radius: 25px;
+background-color:hsl(322, 100%, 66%);
+    color: #fff;
+      -webkit-box-shadow: 3px 3px 2px 2px #ddd;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 2px 2px #ddd;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 2px 2px #ddd; 
+
+font-weight: 600;
+}
+.button-1 button{
+    background-color: #fff;
+    color: #000;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 5em;
+}
+.article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2em;
+    border-radius: 10px;
+     -webkit-box-shadow: 3px 3px 5px 6px #ddd;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ddd;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ddd; 
+ padding: 1em;
+}
+.article .image{
+    width:  40%;
+}
+.image img{
+    width: 100%;
+    
+}
+.article .text{
+    width: 40%;
+}
+.container p{
+    font-weight: 400;
+    color:hsl(208, 11%, 55%);
+    font-size:.93rem;
+}
+.mid .image{
+    order:-1;
+}
+
+footer{
+    background-color: hsl(192, 100%, 9%);
+    padding: 1em;
+    color: #fff;
+    position: relative;
+    
+}
+
+.logo-f{
+    margin-bottom: 1.5em;
+    margin-top: 4em;
+}
+.logo-f svg{
+    width: 100%;
+}
+
+.main-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ .first{
+    width:30%;
+}
+
+.main-footer .first li{
+    display: flex;
+    
+    align-items: flex-start;
+    
+    margin-bottom: 1em;
+}
+li .im-f{
+    margin-right: 1em;
+}
+.second{
+    width: 30%;
+    
+    
+}
+.second ul{
+    
+    float: left;
+    
+}
+.second li{
+    display: inline-block;
+    margin: 1em;
+}
+.third{
+    width:15%;
+}
+.third ul{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.third ul li{
+    height: 35px;
+    width:35px;
+    line-height: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    
+}
+.start{
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    color: hsl(192, 100%, 9%);
+    left: 25%;
+    top:-25%;
+    text-align: center;
+    padding: 1em;
+     -webkit-box-shadow: 3px 3px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 1px 1px #ccc; 
+    margin-top: 2em;
+    
+}
+.start p{
+    margin-bottom: 1em;
+}
+.third ul li:hover{
+    cursor: pointer;
+    border-color: hsl(322, 100%, 66%);
+    color:hsl(322, 100%, 66%); 
+    
+    
+}
+.second li:hover{
+     cursor: pointer;
+    
+    color:hsl(322, 100%, 66%); ; 
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+
+
+@media(max-width:550px){
+    
+    .text-head,.article,.main-footer{
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .text-head .left{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2em;
+        
+    }
+    .article .image{
+        margin-bottom: 2em;
+        order:-1;   
+    }
+    
+    .article .image,.article .text{
+        width: 100%;
+    }
+    .start{
+        width:80%;
+    }
+    .first,.second,.third{
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    .start{
+        width: 80%;
+        left: 10%;
+        top:-15%;
+    }
+}
+
+
+
+
