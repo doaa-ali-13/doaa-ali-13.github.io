@@ -52,6 +52,9 @@ margin: 0;}
 .left{
     width:40%;
 }
+.left p{
+    margin-bottom: 1em;
+}
 .right img{
     width: 100%;
 }
@@ -198,6 +201,7 @@ li .im-f{
 }
 .start p{
     margin-bottom: 1em;
+    font-weight: 600;
 }
 .third ul li:hover{
     cursor: pointer;
