@@ -78,7 +78,7 @@ ul{
     justify-content: space-between;
     align-items: center;
    
-    padding: 1.5 em;
+    padding: 1.5em;
 }
 .logo {
     width: 40%;
@@ -94,7 +94,7 @@ section{
     
     margin: 0 auto;
     
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     padding: 2em;
 }
 
@@ -118,8 +118,8 @@ section{
 }
 
 
-intro p{
-    margin-bottom: .7em;
+.intro p{
+    margin-bottom: 1.7em;
 }
 .intro .img img{
     width: 100%;
