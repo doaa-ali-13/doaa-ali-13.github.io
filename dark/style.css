@@ -97,9 +97,7 @@ section{
     margin-bottom: 4em;
     padding: 2em;
 }
-.intro .container-intro{
-    width:50%;
-}
+
 
 .intro{
     background-color:  hsl(217, 28%, 15%);
@@ -327,6 +325,10 @@ color:hsl(176, 68%, 64%);
     .intro{
         background-image: url(images/bg-curvy-desktop.svg);
     }
+    .intro .container-intro{
+    width:50%;
+   
+}
     
 .grid{
    
