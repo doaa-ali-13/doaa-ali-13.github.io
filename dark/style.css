@@ -78,7 +78,7 @@ ul{
     justify-content: space-between;
     align-items: center;
    
-    padding: 2.5em;
+    padding: 1.5 em;
 }
 .logo {
     width: 40%;
@@ -315,7 +315,10 @@ color:hsl(176, 68%, 64%);
     
 }
 
-
+button:hover{
+    background-color: hsl(176, 68%, 74%);
+    cursor: pointer;
+}
 
 
 @media(min-width:550px){
