@@ -203,10 +203,13 @@ intro p{
 .three input{
     width:100%;
    
+ 
     border-radius: 20px;
-    border: 0px;
+    
     padding: .7em 1.5em;
     margin-bottom: .7em;
+    
+  transition: background-color 0.5s ease-out;
 }
 .three button{
     width: 100%;
@@ -319,7 +322,21 @@ button:hover{
     background-color: hsl(176, 68%, 74%);
     cursor: pointer;
 }
-
+input:valid{ 
+background: url(images/check.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+    background-position:98%;
+    color:#fff;
+}
+input:invalid{ 
+background: url(images/cross.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+    background-position:98%;
+   color:#fff;
+   
+}
 
 @media(min-width:550px){
     .header li{
