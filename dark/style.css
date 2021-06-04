@@ -3,17 +3,42 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+   
+    --praimary-main:hsl(218, 28%, 13%);
+
+    --secondery-test:hsl(219, 30%, 18%);
+     --secondery-intro: hsl(217, 28%, 15%);
+    --secondery-footer:hsl(216, 53%, 9%);
+     --font-color:#fff;
+    --current:hsl(176, 68%, 64%);
+    --hover:hsl(176, 68%, 64%);
+    --image:url(images/bg-curvy-mobile.svg);
+    --image2:url("images/bg-curvy-desktop.svg");
+}
+
+.light-them{
+    --secondery-intro:hsl(180, 6%, 60%);
+    --praimary-main:hsl(90, 10%, 80%);
+    --secondery-footer:hsl(180, 6%, 75%);
+    --secondery-test:hsl(180, 6%, 60%);
+    --font-color:#000;
+    --current:#000;
+    --hover:#fff;
+    --image:url("images/test.svg");
+    --image2:url("images/test2.svg");
+}
 
 body{
-    background-color: hsl(218, 28%, 13%);
+    background-color: var(--praimary-main);
     font-size: 0.875rem;
     font-family:'Open Sans', sans-serif;
     font-weight: 400;
-   
+    color: var(--current);
    
 }
 a{
-    color: #fff;
+    color: var(--font-color);
     text-decoration: none;
 }
 
@@ -28,20 +53,20 @@ button{
     
     
 }
-.header .nav-bar{
-    
-    display: flex;
+.dark{
     text-align: right;
-   
+    padding: 1em 1em 0 1em;
 }
-.header nav{
-    margin-right: .7em;
+header {
+     background-color: var(--secondery-intro);
+  
 }
+
 
 .header li{
     display: inline-block;
     padding-left: .7em;
-    color:#fff;
+    color:var(--font-color);
     font-size: .8em;
     font-family: 'Raleway', sans-serif;
     text-align: right;
@@ -49,7 +74,7 @@ button{
 
 h1,h3,h4,button{
     font-family: 'Raleway', sans-serif;;
-    color:#fff;
+    color:var(--font-color);
     font-weight: 600;
     margin-bottom: .18em;
 }
@@ -63,13 +88,13 @@ h3{
     font-size:1.25em;
 }
 span{
-    color: #fff;
+    color: var(--font-color);
     font-size: .663em;
    color: hsl(0, 0%, 85%);
 }
 p{
     font-size: .863em;
-    color: #fff;
+    color: var(--font-color);
     margin-bottom: .5em;
     
 }
@@ -78,7 +103,7 @@ ul{
 }
 
 .header{
-     background-color:  hsl(217, 28%, 15%);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,8 +130,9 @@ section{
 
 
 .intro{
-    background-color:  hsl(217, 28%, 15%);
-    background-image: url(images/bg-curvy-mobile.svg);
+    background-color:   var( --secondery-intro);
+    background-image: var(--image);
+    
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -131,8 +157,9 @@ section{
 }
 
 
-.grid img{
-    max-width: 80px;
+.grid svg{
+    
+    color:var(--current);
     
 }
 
@@ -154,8 +181,8 @@ section{
 }
 
 .seemore a{
-    color: hsl(176, 68%, 64%);
-     border-bottom: 1px solid hsl(176, 68%, 64%);
+    color: var(--current);
+     border-bottom: 1px solid var(--current);
     text-decoration: none;
     width: 100%;
    display: flex;
@@ -169,7 +196,7 @@ section{
 .reviews{
    width:100%;
    text-align: left;
-    background-color:hsl(219, 30%, 18%);
+    background-color:var( --secondery-test);
     border-radius: 5px;
     padding: 1.4em;
    margin-bottom: 1em;
@@ -195,7 +222,7 @@ section{
 .three{
     width:80%;
    text-align: center;
-    background-color:hsl(217, 28%, 15%);
+    background-color:var( --secondery-intro);
     border-radius: 5px;
     padding: 1.4em;
     position: absolute;
@@ -229,7 +256,7 @@ footer{
     width:100%;
     padding:11em 2em 0 2em;
     
-    background-color: hsl(216, 53%, 9%);
+    background-color: var( --secondery-footer);
 }
 .container-f{
     padding: 2em;
@@ -239,14 +266,14 @@ footer{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    color: #fff;
+    color: var(--font-color);
     
     
 }
 
 footer ul{
     margin-bottom: 3em;
-    color: #fff;
+    color:var(--font-color);
 }
 .first li{
     display: flex;
@@ -280,7 +307,7 @@ li .im-f{
     height: 30px;
     width:30px;
     line-height: 30px;
-    border: 1px solid #fff;
+    border: 1px solid var(--font-color);
     border-radius: 50%;
     text-align: center;
     margin-left:.5em;
@@ -302,19 +329,20 @@ header li a:hover{
 }
  .second ul li a:hover
 {
-color:hsl(176, 68%, 64%);
+color:var(--hover);
+font-weight: 700;
     
 }
  .third ul li:hover{
 
-color:hsl(176, 68%, 64%);
- border-color: hsl(176, 68%, 64%);
-
+color:var(--hover);
+ border-color: var(--hover);
+ font-weight: 700;
 }
 
 
 #dd:hover{
-    fill:#fff;
+    fill:var(--font-color);
     
 }
 .seemore a:hover{
@@ -348,7 +376,7 @@ background: url(images/cross.svg);
         font-size: 1rem;
     }
     .intro{
-        background-image: url(images/bg-curvy-desktop.svg);
+        background-image: var(--image2);
     }
     .intro .container-intro{
     width:50%;
