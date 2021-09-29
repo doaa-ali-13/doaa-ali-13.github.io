@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --praimary-bg:hsl(110, 11%, 91%);
+    --praimary-button:hsl(110, 11%, 91%);
+    --secondery-footer-header:hsl(110, 11%, 84%);
+    --secondery-font:#fff;
+    --length:0;
+}
+
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: 'Indie Flower', cursive ;
+    font-size: 1.3rem ;
+    background-color: var(--praimary-bg);
+    background-image: ;
+    background-size: ;
+    background-position: ;
+    background-repeat: ;
+    
+}
+
+
+h1,.paragraph{
+    font-family:'Indie Flower', cursive ;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+    place-content: center;
+    text-align: center;
+}
+
+h1{
+    font-size: 1.9rem;
+}
+
+.paragraph{
+   
+    font-size:1.2rem ;
+}
+
+button{
+    padding: 1em 1.5em;
+    border-radius: 15px;
+    border: 0;
+    background-color: var(--praimary-button);
+    color: var(--secondery-font);
+    
+}
+.image img{
+    width: 100%;
+    max-width: 150px;
+    border-radius: 50%;
+    
+}
+/*---------------*/
+
+
+header{
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondery-footer-header);
+    margin-bottom: 2em;
+   
+}
+.container{
+    padding: 2em;
+    width: 100%;
+    
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2em auto;
+    
+}
+
+main,.about-me{
+   margin-bottom: 2em;
+}
+
+.about-me{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
+.about-me div:first-of-type{
+    position: relative;
+}
+
+.about-me .dd{
+    
+    opacity: 0;
+}
+.about-me .title{
+    position: absolute;
+    top:50%;
+    left:0;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.title:hover + .dd{
+    opacity: 1;
+    
+} 
+
+.title:hover{
+    top:0;
+}
+
+
+
+footer{
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between; 
+    background-color: var(--secondery-footer-header);
+    
+}
+
+/*-------------------*/
+h1::after,
+h1::before
+{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+
+
+.paragraph::after,
+.paragraph::before
+{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.paragraph::before{
+    background-color: var( --praimary-bg);
+    animation: typeing 4s steps(20) 5s forwards;
+}
+
+h1::before
+{
+    background-color: var( --praimary-bg);
+    
+    animation: typeing 4s steps(30) 1s forwards;
+}
+
+
+h1::after,
+.paragraph::after{
+    width: 0.125em;
+    background-color: #000;
+    animation: 
+        typeing 4s steps(20) 1s forwards,
+        blink 500ms steps(20)  infinite;
+}
+.paragraph::after{
+   
+    animation: 
+        typeing 4s steps(20) 5s forwards,
+        blink 500ms steps(20)  infinite;
+}
+
+
+
+@keyframes typeing{
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes blink{
+    to{
+        background-color: transparent;
+    }
+}
+
+
+
+
+

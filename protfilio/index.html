@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>My protfilio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+   
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body onload="myFunction_set">
+   
+
+
+
+    <header>
+        <div class="download">
+             <a href="https://drive.google.com/uc?export=download&id=1zasyG5TrG763hJj0IG-_sWGfJw0kxqKO" download="Doaa-ali-CV">
+                <button class="button" type="button">Download</button>
+  
+             </a>
+        </div>
+        <div class="light-dark">
+        <img src="images/icons8-sun-48.png" alt="sun" class="icone">
+        </div>
+    
+    </header>
+    
+    <div class="container">
+        
+        
+        <main>
+            
+            <div class="image">
+                <img src="images/sam.jpg">
+            </div>
+            <div class="text">
+                <h1 id="type">Hello.. I'm Doaa Ali</h1>
+                <p class="paragraph" id="type">I'm frontend developer</p>
+                <p>Welcome to my protfilio...</p>
+                <a href="#">Know more about me</a>
+            </div>
+            
+        </main>
+        <section class="about-me">
+            
+            <div class="who-i-am">
+                <div class="title">
+                <p>WHO I AM</p>
+                </div>
+                <div class="dd">
+                    <p>I am 21 years old, I study Informatic Engeneering</p></div>
+            </div>
+            
+            <div class="Education">
+                 <div class="title">
+                <p>WHO I AM</p>
+                </div>
+                <div class="dd">
+                    <p>I am 21 years old, I study Informatic EngeneeringI am 21 years old, I study Informatic EngeneeringI am 21 years old, I study Informatic Engeneering</p></div>
+            </div>
+            
+            <div class="my-work">
+                 <div class="title">
+                <p>WHO I AM</p>
+                </div>
+                <div class="dd">
+                <p>See my work:</p>
+                <ul>
+                    <a><li></li></a>
+                    <a><li></li></a>
+                    <a><li></li></a>
+                    <a><li></li></a>
+                </ul>
+                </div>
+            </div>
+            
+            <div class="my-skills">
+                
+                 <div class="title">
+                <p>WHO I AM</p>
+                </div>
+                <div class="dd">
+                
+                <div><p>Css</p></div>
+                <div><p>Java Script</p></div>
+                <div><p>Jquery</p></div>
+                <div><p>Bootstrap</p></div>
+                </div>
+            </div>
+        
+        </section>
+    
+    </div>
+    <footer>
+     
+        
+       <div class="info" >
+      <ul>  
+         <li>
+             <div class="im-f">
+             <img src="images/icon-location.svg" alt="location">
+
+             </div>
+
+             <div class="text-f">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua
+             </div>
+          </li>
+               
+           <li>
+              <div class="im-f">
+              <img src="images/icon-phone.svg" alt="phone">
+
+              </div>
+             <div class="text-f">+1-543-123-4567</div>
+        </li>
+
+         <li>
+            <div class="im-f">
+            <img src="images/icon-email.svg" alt="email">
+
+            </div>
+            <div class="text-f">doaaali@gmail.com</div>
+        </li>
+
+    </ul>
+    </div>
+    <div class="links">
+        <ul>
+              <a href="#"> <li><i class="fa fa-facebook-square"></i></li></a>
+              <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+              <a href="#"><li><i class="fa fa-instagram"></i></li></a>
+        </ul>
+    </div>
+    </footer>
+    <script>
+  
+  function getLength(){
+      var str=document.getElementById("type").textContent;
+      var n=str.length;
+      console.log(n);
+      return n;
+  }      
+        
+// Get the root element
+var r = document.querySelector(':root');
+
+// Create a function for getting a variable value
+function myFunction_get() {
+  // Get the styles (properties and values) for the root
+  var rs = getComputedStyle(r);
+  // Alert the value of the --blue variable
+  alert("The value of --blue is: " + rs.getPropertyValue('--length'));
+}
+
+// Create a function for setting a variable value
+function myFunction_set() {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  r.style.setProperty('--length', getLength);
+}
+</script>
+</body>
+</html>

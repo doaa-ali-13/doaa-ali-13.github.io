@@ -1,0 +1,396 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container{
+    max-width: 100%;
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+section{
+    padding-bottom: 2em;
+}
+.list ul li a{
+    text-decoration: none;
+    color: rgb(103 105 105);
+    transition: margin-left .4s;
+}
+/*header*/
+header{
+    
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3em 2em;
+    
+    
+    
+}
+
+.logo img{
+    width:max(6vw,60px);
+
+}
+.list{
+    position: relative;
+}
+
+.list-icon span{
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 10px;
+    border-bottom:3px solid rgb(8, 8, 8);
+    
+}
+.list-icon span:nth-child(2){
+    width: 15px;
+    transition: width .5s;
+}
+.list ul{
+    
+    padding: 0;
+    right: 0;
+    top: 150%;
+    position: absolute;
+    display: none;
+    z-index: 2;
+    background-color: lightgrey;
+    
+    
+}
+
+.list ul::before{
+    content: '';
+    /* padding: 20px; */
+    border: 10px solid;
+    border-color: transparent transparent lightgray transparent;
+    position: absolute;
+    /* background-color: dimgrey; */
+    left: 75%;
+    top: -20px;
+}
+.list-icon:hover~ ul,.list ul:hover{
+    display: initial;
+    
+}
+
+
+.list-icon:hover span:nth-child(2){
+    width: 30px;
+}
+.list ul li {
+    padding: 8px 15px;
+    width: 150px;
+    border-bottom: 1px solid rgb(77, 76, 76);
+    
+}
+.list ul li a:hover{
+    margin-left: 10px;
+}
+    
+
+/*landing page*/
+
+/*welcome*/
+.landing{
+    background-color: #F6F6F6;
+}
+.landing .welcome{
+    background-image:url(../images/landing.jpg);
+    background-size: cover;
+    text-align: center;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+.welcome h1{
+    color: #10CAB7;
+    font-size: 2em;
+    margin-bottom: 2rem;
+}
+.welcome p{
+    width: max(20vw,16em);
+    line-height: 1.6;
+}
+/*things*/
+.landing .container{
+    width: 80%;
+}
+.land{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+.land h3{
+    font-size: 1.3em;
+    font-weight: bolder;
+    margin-bottom: 1.2em;
+}
+.land p{
+    line-height: 1.8;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: gray;
+
+}
+/*services*/
+.title{
+   
+    text-align: center;
+    color: #EBECED;
+    font-weight: bolder;
+    position: relative;
+    
+    
+}
+.title h1{
+    font-size: 4em;
+    margin-bottom: 1em;
+}
+.services{
+    padding: 10px;
+}
+.services .title h1::after{
+    content: 'dont be busy, be productive';
+    position: absolute;
+    color: #999;
+    font-size: initial;
+    top: 72%;
+    left: 0;
+    right: 0;
+}
+.contain-ser{
+    display: flex;
+    align-items: center;
+}
+.contain-ser img{
+    width: 250px;
+    display: none;
+}
+
+/*portfolio*/
+.portfolio{
+    background-color: #F6F6F6;
+    padding: 10px;
+}
+.portfolio .title h1::after{
+    content: 'if you do it right, it will laast forever';
+    position: absolute;
+    color: #999;
+    font-size: initial;
+    top: 72%;
+    left: 0;
+    right: 0;
+}
+.pro{
+    text-align: left;
+    background-color: #fff;
+}
+.portfolio img{
+    width: 100%;
+    margin-bottom: 1em;;
+}
+/*about*/
+.about .title h1::after{
+    content: 'Less is more work';
+    position: absolute;
+    color: #999;
+    font-size: initial;
+    top: 72%;
+    left: 0;
+    right: 0;
+}
+.img-about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about img{
+    width: 90%;
+    margin-bottom: 1em;;
+}
+.info-about{
+    line-height: 1.8;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: gray;
+    text-align: center;
+}
+.about .main-p{
+    color: #000;
+    padding-bottom: 40px;
+    font-weight: 700;
+}
+.em{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+.about span:empty{
+    width: 20vh;
+    height: 2px;
+    background-color: dodgerblue;
+}
+/*contact*/
+.contact{
+    background-color: #F6F6F6;
+    padding: 2em 0 4em 0;
+}
+.contact .title h1::after{
+    content: 'We born to create';
+    position: absolute;
+    color: #999;
+    font-size: initial;
+    top: 72%;
+    left: 0;
+    right: 0;
+}
+.contain-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.contact h2:nth-of-type(1){
+    color: #2C4755;
+    font-weight: bolder;
+}
+
+.contact h2:nth-of-type(2){
+    color:dodgerblue;
+    font-weight: 500;
+}
+
+/*footer*/
+footer {
+    background-color: #2C4755;
+    text-align: center;
+    color: ghostwhite;
+    font-size: 1.3em;
+    padding: 1em;
+}
+footer span{
+    color:dodgerblue;
+}
+
+/*medium screen*/
+@media (min-width:700px){
+    
+    .things,.service,.contain-port{
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    .land{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        width: 50%;
+        margin: 20px 0;
+        text-align: center;
+    }
+    .about img{
+        width: 50%;
+       
+    }
+}
+@media (min-width:1000px){
+    .landing .land{
+        width: 33.33%;
+    }
+    /*about*/
+    .info-about{
+        width: 50%;
+    }
+    .em{
+        justify-content: flex-start;
+    }
+    .contain-about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    .about img{
+        width: 50%;
+        z-index: 2;
+       
+    }
+    .img-about{
+        width: 50%;
+        position: relative;
+    }
+
+    .img-about::before{
+        content: '';
+    height: 80%;
+    width: 80px;
+    position: absolute;
+    /* background-color: #EBECED; */
+    border-left: 6em solid #10CAB7;
+    border-bottom: 3em solid #10CAB7;
+    /* left: 10%; */
+    right: 7%;
+    top: -28px;
+    }
+
+    .img-about::after{
+        content: '';
+        width: 3em;
+        height: 100%;
+        position: absolute;
+        background-color: #EBECED;
+        padding: 20px;
+        left:15%;
+        top:-28px;
+        transform: scaleY(30px);
+    }
+
+}
+@media (min-width:1400px){
+    .contain-ser{
+        display: flex;
+    }
+    .services .land{
+        width: 45%;
+    }
+    .service{
+        width:70%;
+    }
+    .pic-ser{
+        width: 30%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+    .contain-ser img{
+        display: initial;
+        z-index: 3;
+
+    }
+    .pic-ser::after{
+        content: '';
+        width: 3em;
+        height: 100%;
+        background-color: #2C4755;
+        position: absolute;
+        padding: 30px 20px;
+        top: -28px;
+        right: 10%;
+    }
+}
