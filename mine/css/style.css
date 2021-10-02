@@ -30,17 +30,19 @@ section{
 }
 
 
-
+i{
+    color: #3d545a;
+}
 /*header*/
 header{
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 0;
     background-color: #0865b19e;
     display: flex;
     justify-content: space-around;
     align-items: center;}
 .logo,.nav{
-    width: 50%;
+    width: 30%;
 }
 .logo p{
     font-size: max(1.4em,25px);
@@ -364,7 +366,37 @@ svg{
 .skill:nth-child(3) .icon-skill:hover~.avg div{
     animation: coloro-50 .3s linear alternate forwards 1;
 }
+/*contact*/
+.contact{
+    padding: 10px;
+}
+.callme,.social{
+    display: flex;
+    flex-direction: column;
+}
 
+.social{
+    padding: 10px;
+    align-items: center;
+}
+.callme>ul li{
+    margin-bottom: 1em;
+}
+.callme span{
+    margin-left: 1.3em;
+    color: #0865b19e;
+}
+.social p{
+    color: #0865b1f7;
+    margin-bottom: 1.4em;
+    font-size: 1.2em;
+}
+.social ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
 @keyframes widthy{
     50%{
         transform: translateX(50px);
