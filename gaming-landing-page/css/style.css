@@ -295,11 +295,19 @@
   left: 170px;
   animation: move-right 0.5s alternate infinite forwards ;
 }
-@media (max-width: 992px) {
-  .header .container .nav-sec .img img{
-      display: none;
-  }
-  }
+
+  @media (max-width: 768px) {
+ 
+    .header .container .nav-sec .img::before{
+      width: 0;
+    }
+    .header .container .nav-sec .img::after{
+     width: 0;
+    }
+       .header .container .nav-sec .img{
+        display: none;
+    }
+    }
 .header .container .nav-sec .links{
 min-width: 240px;
 width: 100%;
