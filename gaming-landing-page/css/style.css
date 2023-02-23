@@ -295,19 +295,17 @@
   left: 170px;
   animation: move-right 0.5s alternate infinite forwards ;
 }
-
-  @media (max-width: 768px) {
- 
-    .header .container .nav-sec .img::before{
-      width: 0;
-    }
-    .header .container .nav-sec .img::after{
-     width: 0;
-    }
-       .header .container .nav-sec .img{
-        display: none;
-    }
-    }
+@media (max-width: 992px) {
+  .header .container .nav-sec .img img{
+      display: none;
+  }
+  .header .container .nav-sec .img::after{
+    width: 0;
+  }
+  .header .container .nav-sec .img::before{
+    width: 0;
+  }
+}
 .header .container .nav-sec .links{
 min-width: 240px;
 width: 100%;
@@ -416,7 +414,7 @@ position: relative;
     margin: 5px 0;
     color: var(--main-color);
   }
-
+ 
   .landing .go-down::after{
     font-family: "Font Awesome 5 Free";
     content: "\f063";
@@ -1005,8 +1003,8 @@ transition: 0.3s;}
   margin-bottom: 10px;
  }
  .skills .bar{
-  width: 400px;
-  max-width: 100%;
+  max-width: 400px;
+  width: 100%;
   background-color: var(--alter-color);
   margin-bottom: 15px;
   height: 30px;
@@ -1055,24 +1053,21 @@ transition: 0.3s;}
   max-width: 100%;
   width: 600px;
   position: relative;
-  right: -115px;
+  right: -103px;
 }
 
  .works .work-img{
   margin-right: 15px;
   order: 2;
-
 }
  @media (max-width: 992px) {
   .works .work-img{
- margin-bottom: 20px;
- margin-right: 0;
-
+    display: none;
   }
   }
  @media (max-width: 768px) {
   .works .work-img{
-    display: none;
+  display: none;
   }
   }
  .works .work{
@@ -1407,7 +1402,8 @@ color: var(--main-color);
 }
 .videos .top-vid{
 flex: 1;
-border: 1px solid var(--alter-color);
+border: 1px solid var(--alter-color-2);
+border-bottom: none;
 
 }
 .videos .title{
@@ -1426,7 +1422,7 @@ border: 1px solid var(--alter-color);
   transition: var(--main-transition);
 }
 .videos .title i:hover{
-  color:rgb(9 253 82);
+  color:var(--alter-color-2);
 }
 .videos ul a{
   padding: 20px;
@@ -1435,8 +1431,8 @@ border: 1px solid var(--alter-color);
   transition: var(--main-transition);
 }
 .videos ul a:hover{
-  background-color: #a8e0c2;
-  color: rgb(9 253 82);
+  background-color: var(--alter-color-2);
+  color: #fff;
 }
 
 .videos ul a:last-of-type{
@@ -1452,14 +1448,14 @@ border: 1px solid var(--alter-color);
 }
 .videos .main-img{
   padding: 10px;
-  background-color: var(--main-color);
+  background-color: var(--alter-color-2);
  
 
 }
 
 .videos .main-img img{
 max-width: 100%;
-width: 800px;
+width: 1000px;
 }
 .videos .main-img p{
   padding: 20px 10px;
