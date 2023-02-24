@@ -758,7 +758,7 @@ transition: 0.3s;}
  }
 
  .testimonials .imgpro img{
-  max-width: 25%;
+  max-width: 30%;
   width: 200px;
   position: absolute;
   right: -5px;
@@ -999,12 +999,15 @@ transition: 0.3s;}
    display: none;
   }
 }
+.skills .skills-bar{
+  max-width: 100%;
+}
  .skills .skills-bar h3{
   margin-bottom: 10px;
  }
  .skills .bar{
-  max-width: 400px;
-  width: 100%;
+  width: 600px;
+  max-width: 100%;
   background-color: var(--alter-color);
   margin-bottom: 15px;
   height: 30px;
@@ -1546,7 +1549,8 @@ position: relative;
   color: #fff;
   position: relative;
   z-index: 3;
-  animation: change-back 5s linear  infinite ;
+  transition: var(--main-transition);
+  animation: change-back 15s alternate  infinite ;
 }
 
 .discount .dis::before{
@@ -1724,7 +1728,10 @@ color: var(--alter-color-2);
   to {transform: translateX(-20px);}
 }
 @keyframes change-back {
-  to {background-image: url("../images/pxfuel\ \(17\)v.jpg");}
+  25%{background-image: url("../images/pxfuel\ \(17\)v.jpg");}
+  50%{background-image: url("../images/pxfuel\ \(2\)copy.jpg");}
+  75%{background-image: url("../images/pxfuel\ \(54\)\ -\ Copy.jpg");}
+  100%{background-image: url("../images/pxfuel\ \(38\)\ -\ Copy.jpg");}
 }
 @keyframes move-down {
   from {transform: translateY(0);}
