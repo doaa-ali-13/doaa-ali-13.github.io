@@ -10,6 +10,26 @@ body{
 .container{
     margin: 100px auto;
 }
+.add-img{
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    display: flex;
+}
+.add-img i{
+    margin: 0 auto;
+    font-size: 40px;
+    color: #fff;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.add-img i:hover{
+    transform: scale(1.1);
+}
 .container ul{
     
     list-style: none;
@@ -88,6 +108,9 @@ body{
     background-color: #ff000082;
     padding: 5px 5px;
     display: block;
+    max-height: 100%;
+    max-width: 100%;
+    width: 600px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -129,5 +152,6 @@ body{
 }
 .open img{
     max-width: 100%;
-    max-height: 500px;
+    width: 100%;
+    max-height: 500px
 }
