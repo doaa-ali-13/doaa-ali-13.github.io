@@ -50,33 +50,35 @@ window.onload=()=>{
                 })
 
                 }}
+                console.log(imgdiv)
+                addedimage()
            
-                imgdiv.forEach(img=>{
-                    img.onclick=(selected)=>{
-                    const boximage = document.querySelector(".open"),
-                    cat = boximage.querySelector(".details"),
-                    catspan= cat.querySelector("span"),
-                    shadow = document.querySelector(".shadow"),
-                    close = cat.querySelector("i");
-                    close.onclick=()=>{
-                        boximage.classList.add("hide");
-                        boximage.classList.remove("show");
-                        shadow.classList.remove("show")
-                    }
-                    imgreplaced = boximage.querySelector("img");
-                    catimg= img.getAttribute("data").split(",");
-                    boximage.classList.add("show");
-                    boximage.classList.remove("hide");
-                    shadow.classList.add("show")
+                // imgdiv.forEach(img=>{
+                //     img.onclick=(selected)=>{
+                //     const boximage = document.querySelector(".open"),
+                //     cat = boximage.querySelector(".details"),
+                //     catspan= cat.querySelector("span"),
+                //     shadow = document.querySelector(".shadow"),
+                //     close = cat.querySelector("i");
+                //     close.onclick=()=>{
+                //         boximage.classList.add("hide");
+                //         boximage.classList.remove("show");
+                //         shadow.classList.remove("show")
+                //     }
+                //     imgreplaced = boximage.querySelector("img");
+                //     catimg= img.getAttribute("data").split(",");
+                //     boximage.classList.add("show");
+                //     boximage.classList.remove("hide");
+                //     shadow.classList.add("show")
 
-                    catspan.textContent=""
-                    catimg.forEach(tag=>{
-                        catspan.innerHTML +=`<span>${tag}</span>`
-                    })
-                    newsrc=selected.target.getAttribute("src");
-                    imgreplaced.setAttribute("src",newsrc);
+                //     catspan.textContent=""
+                //     catimg.forEach(tag=>{
+                //         catspan.innerHTML +=`<span>${tag}</span>`
+                //     })
+                //     newsrc=selected.target.getAttribute("src");
+                //     imgreplaced.setAttribute("src",newsrc);
                     
-                }})
+                // }})
 
                 const addimg = document.querySelector(".add-img")
                       input = document.querySelector("input")
@@ -88,6 +90,10 @@ window.onload=()=>{
                     file=this.files[0];
                     console.log(file);
                     addImage()
+                    setTimeout(function () {
+                        addedimage();
+                      }, 2000);
+                      
                 })
 
                 function addImage(){
@@ -97,15 +103,70 @@ window.onload=()=>{
                         filereader.onload=()=>{
                             let fileurl = filereader.result;
                             let tagimage = `<img src=${fileurl} alt="">`;
-                            const div = document.createElement('div');
-                            div.classList.add("img");
+                            let div = document.createElement('div');
+                            div.classList.add("img","added");
                             div.setAttribute("data","");
                             div.innerHTML=tagimage;
                             gellary.insertBefore(div,last)   
                         }
 
-                        filereader.readAsDataURL(file)
-                    }
+                        filereader.readAsDataURL(file);}
+
+                       }
+                        function addedimage(){
+
+                            const allimgs= document.querySelectorAll(".img")
+                            allimgs.forEach(img=>{
+                                console.log(img.classList)
+                                if(!img.classList.contains("add-img")){
+                                img.onclick=(selected)=>{
+                                const boximage = document.querySelector(".open"),
+                                cat = boximage.querySelector(".details"),
+                                catspan= cat.querySelector("span"),
+                                shadow = document.querySelector(".shadow"),
+                                close = cat.querySelector("i");
+                                close.onclick=()=>{
+                                    boximage.classList.add("hide");
+                                    boximage.classList.remove("show");
+                                    shadow.classList.remove("show")
+                                }
+                                imgreplaced = boximage.querySelector("img");
+                                console.log(img)
+                                catimg= img.getAttribute("data").split(",");
+                                boximage.classList.add("show");
+                                boximage.classList.remove("hide");
+                                shadow.classList.add("show")
+            
+                                catspan.textContent=""
+                                catimg.forEach(tag=>{
+                                    catspan.innerHTML +=`<span>${tag}</span>`
+                                })
+                                newsrc=selected.target.getAttribute("src");
+                                imgreplaced.setAttribute("src",newsrc);
+                                
+                            }}})
+                            // const newdiv = gellary.querySelectorAll(".added")
+                            // console.log(newdiv)
+                            // newdiv.onclick=(selected1)=>{
+                            //     const boximage = document.querySelector(".open"),
+                            //     cat = boximage.querySelector(".details"),
+                            //     catspan= cat.querySelector("span"),
+                            //     shadow = document.querySelector(".shadow"),
+                            //     close = cat.querySelector("i");
+                            //     close.onclick=()=>{
+                            //         boximage.classList.add("hide");
+                            //         boximage.classList.remove("show");
+                            //         shadow.classList.remove("show")
+                            //     }
+                            //     imgreplaced = boximage.querySelector("img");
+                            //     boximage.classList.add("show");
+                            //     boximage.classList.remove("hide");
+                            //     shadow.classList.add("show");
+                            //     newsrc=selected1.target.getAttribute("src");
+                            //     imgreplaced.setAttribute("src",newsrc);
+                            
+                            // }
+                        }
                     
                 }     
-            }
+            

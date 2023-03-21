@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="notification">
+        <div class="taskAdd error dactive_notif"> please Enter your Task first!</div>
+        <div class="timeAdd error dactive_notif"> please Enter Time before the End of the day and after the current time</div>
+        <div class="success dactive_notif">Your task is added successfully!</div>
+    </div>
+    <div class="container">
+        <div class="shadow"></div>
+       
+        <div class="add_task">
+            <p>Add a task you want to do</p>
+            <i class="add fas fa-plus"></i>
+        </div>
+        <div class="input dactive">
+            <label>Whatare you planning to do today?</label>
+            <input type="text">
+            <label>Do you want to add deadline for your task?</label>
+            <input type="time">
+            <button class="submit_task">Add task</button>
+        </div>
+        <ul class="list dactive_ul">           
+            
+            
+                <!--<i class="clock fas fa-clock"></i>
+                <span>11:11</span>-->
+            </div>
+             
+        </ul>
+       
+    </div>
+   
+    
+<script src="main.js"></script>
+</body>
+</html>

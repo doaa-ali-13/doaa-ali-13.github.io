@@ -1,0 +1,385 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    --bc1: #FFCE32;
+    --bc2: #1D63FF;
+    --main_color: #FFCE32;
+    --hover_color: #1D63FF;
+    --hover_color_bc: #18a9e1;;
+    --trans: 0.3s;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, var(--bc1) 0%, var(--bc2) 100%);
+    color: #fff;
+}
+ul{
+    list-style: none;
+}
+.notification{
+    margin: 0 auto 50px;
+    max-width: 300px;
+    overflow: hidden;
+}
+.notification>div{
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #fff;
+    color: black;
+    position: relative;
+   
+    transition: all 0.6s ease;
+}
+.notification>div.error::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    left: 0;
+    bottom: 0;
+    background-color: #bd0a0a;
+   
+}
+.notification>div.success::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    left: 0;
+    bottom: 0;
+    background-color: #04b62b;
+}
+.dactive_notif{
+    top: -100%;
+    left: -100%;
+   
+}
+.active_notif{
+    top: 0;
+    left: 0;
+}
+.container{
+    max-width: 100%;
+    width: 500px;
+    max-height: 500px;
+    padding: 30px 50px;
+    background-color: var(--main_color);
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.205);
+    margin: 0 auto 50px;
+    position: relative;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: none;
+}
+.container .shadow{
+    width: 150%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000059;
+    z-index: 5;
+    transition: all ease var(--trans);
+}
+.shadow.active{
+    height: 100%;
+}
+.activeLi{
+    z-index: 6 !important;
+}
+@media (max-width:789px){
+    .container{
+    width : 350px;
+}
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.container .add_task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+@media (max-width:789px){
+    .container .add_task{
+        font-size: 20px;
+}
+}
+
+.container .add_task p{
+    padding-left: 10px;
+    padding-right: 10px;}
+
+.container .add_task i{
+    font-size: 15px;
+    transition: all var(--trans);
+    background-color: var(--bc2);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.205);
+    cursor: pointer;
+}
+
+.container ul li .icons i:hover{
+    color:var(--hover_color_bc);
+}
+
+.container .add_task i:hover{
+    background-color:var(--hover_color_bc) ;
+}
+
+.container .input{
+    padding: 10px 20px;
+    font-size: 20px;
+    flex-direction: column;
+    background-color: var(--bc2);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.205);
+    transition: all var(--trans);
+}
+.active{
+    display: flex;
+    right: 0;
+    animation: rightLeft .5s ease-in  1 alternate;
+}
+.dactive{
+    display: none;
+    right: Calc(100% + 50px);
+}
+.container .input label{
+    margin-bottom: 15px;
+}
+.container .input input{
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+.container .submit_task{
+    width: fit-content;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #fff;
+    color: var(--bc2);
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+    transition: var(--trans);
+}
+.container .submit_task:hover{
+    color: #fff;
+    background-color: var(--bc1);
+}
+.container ul{
+    font-size: 20px;
+    padding: 0 10px;
+    position: relative;
+    transition: all var(--trans);
+    overflow: hidden;
+}
+.active_ul{
+    right: -125%;
+    display: none;
+}
+.dactive_ul{
+    animation: leftRight .5s ease-in  1 alternate;
+    right: 0;
+
+}
+.container ul li{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    margin-top: 45px;
+}
+.container ul li .form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.container ul li .form input{
+    padding: 10px 20px;
+    margin: 5px 0;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.container .taskdoneLi::after{
+    content: "Well Done!";
+    position: absolute;
+    color: #f3f3f3;
+    background-color: var(--bc2);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: var(--trans);
+    left: 147px;
+    top: -20px;
+    animation: fromUp 0.6s ease 1 alternate;
+}
+.container ul li p{
+    max-width: 75%;
+}
+.container ul .time{
+    position: relative;
+    color: var(--bc2);
+    font-weight: bold;
+    right: 19px;
+    top: -39px;
+    font-size: 12px;
+}
+.container ul .time::before{
+    content: attr(time);
+    position: absolute;
+    font-size: 15px;
+    width: 80px;
+    text-align: center;
+    animation: flashing 1s linear  infinite alternate;
+    left: 24px;
+    top: -38px;
+   
+}
+.container ul .time::after{
+    content: "\f017";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: -42px;
+    font-size: 20px;  
+}
+.timeout{
+    color:#c71e15 !important;
+    transform-origin: center;
+}
+.taskdoneLi{
+    position: relative;
+}
+.timeoutLi{
+    border: 3px solid #c71e15;
+    animation: rotate .5s ease-in  3 alternate;
+}
+.cancled{
+    border: 3px solid #555;
+    color: #555 !important;
+    position: relative;
+    animation: rotate .5s ease-in  3 alternate;
+}
+.cancled::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #55555545;
+    left: 0;
+}
+
+.cancled::after{
+    content: "";
+    position: absolute;
+    width: 110%;
+    height: 1px;
+    left: -13px;
+    border-radius: 15px;
+    background-color: #555;
+}
+
+.container ul li .icons{
+    max-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+}
+.container ul li .icons i{
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all var(--trans);
+    margin-bottom: 5px;
+}
+
+@keyframes wave-anim{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale{
+    from{
+        transform: scaleY(.8);
+    }
+    to{
+        transform: scaleY(1.1);
+    }
+}
+@keyframes rotate{
+    from{
+        transform: rotate(-2deg);
+    }
+    to{
+        transform: rotate(2deg);
+    }
+}
+@keyframes flashing{
+    from{
+        opacity: 0.1;
+    }
+    to{
+       opacity: 1;
+    }
+}
+@keyframes fromUp{
+    from{
+        top: 0;
+    }
+    to{
+       top: -20px;
+    }
+}
+
+@keyframes rightLeft{
+    from{
+        right: Calc(100% + 50px);
+    }
+    to{
+        right: 0;
+    }
+}
+
+@keyframes leftRight{
+    from{
+        right: -125%;
+    }
+    to{
+        right: 0;
+    }
+}
