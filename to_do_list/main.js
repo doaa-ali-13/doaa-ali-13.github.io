@@ -13,20 +13,14 @@ submitbtn.onclick = ()=>{
     c1 =addTask()
     if(c1){
         console.log("yes")
-        let task1notif = document.querySelector(".taskAdd");
-        let timenotif = document.querySelector(".timeAdd");
-        let tasknotif = document.querySelector(".notification .success");
-            tasknotif.classList.remove("dactive_notif")
-            tasknotif.classList.add("active_notif")
-            task1notif.style.display = "none"
-            timenotif.style.display = "none"
-
-            let sec = 0
-            let id=setInterval(()=>{
-            sec++;
+        let notification = document.querySelector(".notification");
+        notification.innerHTML+=`<div class="success active_notif">Your task is added successfully!</div>`
+        let sec = 0
+        let id=setInterval(()=>{
+        sec++;
             if (sec===10){
-                tasknotif.classList.add("dactive_notif")
-                tasknotif.classList.remove("active_notif")
+                let success = document.querySelector(".success");
+                success.remove()
                 clearInterval(id)
             }
         },1000)
@@ -40,21 +34,14 @@ onkeydown = (e)=>{
     if(e.key ==='Enter'){
     c1 =addTask()
     if(c1){
-        console.log("yes")
-        let task1notif = document.querySelector(".taskAdd");
-        let timenotif = document.querySelector(".timeAdd");
-        let tasknotif = document.querySelector(".notification .success");
-            tasknotif.classList.remove("dactive_notif")
-            tasknotif.classList.add("active_notif")
-            task1notif.style.display = "none"
-            timenotif.style.display = "none"
-
-            let sec = 0
-            let id=setInterval(()=>{
-            sec++;
+        let notification = document.querySelector(".notification");
+        notification.innerHTML+=`<div class="success active_notif">Your task is added successfully!</div>`
+        let sec = 0
+        let id=setInterval(()=>{
+        sec++;
             if (sec===10){
-                tasknotif.classList.add("dactive_notif")
-                tasknotif.classList.remove("active_notif")
+                let success = document.querySelector(".success");
+                success.remove()
                 clearInterval(id)
             }
         },1000)
@@ -255,47 +242,38 @@ function countDown(timeValue,time_div){let id =setInterval(function() {
 }, 1000,time_div);}
 
 function notification(taskValue,dis){
-    let tasknotif = document.querySelector(".taskAdd");
-    let timenotif = document.querySelector(".timeAdd");
+    let notification = document.querySelector(".notification");
+    // let timenotif = document.querySelector(".timeAdd");
 
     if (taskValue.trim()==0){
-        tasknotif.style.display = "block"
-        console.log("task")
-        console.log(taskValue.length)
-        tasknotif.classList.remove("dactive_notif")
-        tasknotif.classList.add("active_notif")
+        notification.innerHTML+=`<div class="taskAdd error active_notif"> please Enter your Task first!</div>`
         let sec = 0
         let id=setInterval(()=>{
         sec++;
         if (sec===10){
-            tasknotif.classList.add("dactive_notif")
-            tasknotif.classList.remove("active_notif")
+            let tasknotif = document.querySelector(".taskAdd");
+            tasknotif.remove()
             clearInterval(id)
         }
     },1000)
     }
     else{
         console.log("none")
-        tasknotif.style.display = "none"
     }
     if (dis<=0){
-        timenotif.style.display = "block"
-        console.log("task")
-        timenotif.classList.remove("dactive_notif")
-        timenotif.classList.add("active_notif")
+        notification.innerHTML+=`<div class="timeAdd error active_notif"> please Enter Time before the End of the day and after the current time</div>`
         let sec = 0
         let id=setInterval(()=>{
         sec++;
         if (sec===10){
-            timenotif.classList.add("dactive_notif")
-            timenotif.classList.remove("active_notif")
+            let timenotif = document.querySelector(".timeAdd");
+            timenotif.remove()
             clearInterval(id)
         }
     },1000)
     }
     else{
         console.log("none")
-        timenotif.style.display = "none"
     }
     
 }
