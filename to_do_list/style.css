@@ -23,7 +23,7 @@ ul{
     list-style: none;
 }
 .notification{
-    margin: 0 auto 50px;
+    margin: 0 auto;
     max-width: 300px;
     overflow: hidden;
 }
@@ -67,9 +67,9 @@ ul{
 }
 .container{
     max-width: 100%;
+    max-height: 420px;;
     width: 500px;
-    max-height: 500px;
-    padding: 30px 50px;
+    padding: 30px 20px;
     background-color: var(--main_color);
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.205);
@@ -81,7 +81,7 @@ ul{
 }
 .container .shadow{
     width: 150%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #00000059;
@@ -257,7 +257,7 @@ ul{
 .container ul .time::before{
     content: attr(time);
     position: absolute;
-    font-size: 15px;
+    font-size: 13px;
     width: 80px;
     text-align: center;
     animation: flashing 1s linear  infinite alternate;
