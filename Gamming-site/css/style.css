@@ -221,7 +221,8 @@ nav ul li{
 }
 @media(max-width:770px){
     .sign-in .content{
-        width: 300px;
+        height: 100%;
+        width: 100%;
         padding: 10px 30px;
         font-size: 16px;
     }
@@ -287,7 +288,7 @@ nav ul li{
 }
 .content .closed{
     position: absolute;
-    right: 25px;
+    right: 15px;
     font-size: 15px;
     color: var(--second-color);
     cursor: pointer;
