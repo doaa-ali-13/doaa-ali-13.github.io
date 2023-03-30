@@ -150,7 +150,7 @@ nav ul li{
     padding: 20px 0px;
 }
 .container{
-    padding: 20px 60px;
+    padding: 20px 40px;
 }
 .home_main{
     display: flex;
@@ -167,6 +167,7 @@ nav ul li{
 }
 .home_main .text_content{
     max-width: 600px;
+    width: 100%;
     flex: 2;
 }
 .text_content h1{
@@ -290,4 +291,29 @@ nav ul li{
     font-size: 15px;
     color: var(--second-color);
     cursor: pointer;
+}
+
+@media(max-width:350px){
+    .logo_section img{
+        width: 100%;
+        max-width: 30px;
+    }
+    .search-icon{
+        font-size: 15px;
+    }
+    .icons_section i{
+        margin-left: 10px;
+        font-size: 15px;
+        color: var(--second-color);
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    nav ul li{
+        font-size: 10px;
+    }
+    .home_main .text_content{
+        width: 100%;
+        max-width: 200px;
+        font-size: 15px;
+    }
 }
